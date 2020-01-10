@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5dbf064d3063363348090e56"},"fn":"john","ln":"mor","email":"joe100583@gmail.com","address":"Raanana , 10 haprahim","password":"admin","role":"admin"}
+{"_id":{"$oid":"5dbf0766c63e3a3348154d11"},"fn":"bob","ln":"randel","email":"nomail@gmail.com","password":"password","address":"Raanana , 10 nnn","role":"costumer"}
+{"_id":{"$oid":"5de2d55fc2faf60a406c9ba6"},"fn":"jj","ln":"mm","email":"jm@gmail.com","address":"ta, 10 rrr","password":"pass","role":"customer","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5de2d9cb7c0c3c39500546d4"},"fn":"rr","ln":"tt","email":"asdas@mail.com","address":"asdfasdf","password":"pass","role":"customer","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5de2da3f7c0c3c39500546d5"},"fn":"sara","ln":"lee","email":"sl@mail.com","address":"cityville","password":"pass","role":"customer","__v":{"$numberInt":"0"}}

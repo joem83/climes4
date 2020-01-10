@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5dbf09313063363348090e59"},"userid":{"$oid":"5dbf0766c63e3a3348154d11"},"dateCreated":{"$date":{"$numberLong":"1572818400000"}}}
+{"_id":{"$oid":"5dd6d9bbc3e94d3848d37f79"},"userid":{"$oid":"5dbf064d3063363348090e56"},"dateCreated":{"$date":{"$numberLong":"1572732000000"}}}

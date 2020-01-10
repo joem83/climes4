@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5dbf08893063363348090e58"},"name":"smart watch","category":{"$oid":"5dc3079eba4f7601f4f8b110"},"price":{"$numberInt":"999"},"imagepath":"sony-smartwatch.jpg"}
+{"_id":{"$oid":"5dc85b80478c1a5704b0ecad"},"name":"sony bt speaker","category":{"$oid":"5dda146dd602bc458c2bc59e"},"price":{"$numberInt":"500"},"imagepath":"sony-bt-speaker.jpg","__v":{"$numberInt":"0"}}

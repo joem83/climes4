@@ -1,0 +1,28 @@
+<h2 class="page-header">Sign Up</h2>
+<form #addPost="ngForm" (ngSubmit)="signup(addPost.value)">
+    <div class="form-group">
+        <label>Firstname
+  <input (ngModel)="fn" type="text" name="fn" value="Enter firstname" class="form-control" required #fn="ngModel">
+    </label>
+</div>
+<div class="form-group">
+    <label>Lastname
+<input (ngModel)="ln" type="text" name="ln" value="Enter lastname" class="form-control" required #ln="ngModel">
+</label>
+</div>
+<div class="form-group">
+    <label>Address
+<input (ngModel)="address" type="text" name="address" value="Enter Address" class="form-control" required #ln="ngModel">
+</label>
+</div> <div class="form-group">
+    <label>Email
+<input (ngModel)="email" type="text" name="email" value="Enter email" class="form-control" required #email="ngModel">
+</label>
+</div>
+    <div class="form-group">
+        <label>Password:
+  <input (ngModel)="password" type="text" name="password" class="form-control">
+</label>
+</div><br>
+  <input type="submit" class="btn btn-primary" value="SignUp" [attr.disabled]="addPost.invalid ? 'true' : null">
+</form> 
