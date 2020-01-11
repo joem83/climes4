@@ -89,7 +89,7 @@ let headers = new HttpHeaders();
 
     headers.append('Content-Type', 'application/json');
     
-    return this._http.get(`http://localhost:3000/orders/${id}`, { headers: headers })
+    return this._http.get(`http://localhost:3000/cartItems/${id}`, { headers: headers })
   }
 
   logout() {

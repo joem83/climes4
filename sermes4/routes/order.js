@@ -8,7 +8,8 @@ router.get('/', function (req, res, next) {
     console.log(OrdersModel);
     OrdersModel
     .find({})
-    .populate('userid','cartid')
+    .populate('userid')
+    .populate('cartid','dateCreated')
     .exec(function (err, data) {
         console.log(data);
         res.json({ page: 'GET allOrders page', data });

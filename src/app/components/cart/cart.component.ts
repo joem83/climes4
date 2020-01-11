@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
   
     this._authService.getOrderForUser(id).subscribe((data) => {
       let datas = data;
-      this.orders = datas.data[0];
+      this.orders = datas;
      console.log(this.orders);
       this.name= JSON.parse(localStorage.getItem("user"));
      // console.log(this.name);

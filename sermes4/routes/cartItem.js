@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-var CartItemModel = require('../models/cartItems');
+var CartItemModel = require('../models/cartItems').default;
 
 /* GET allItems page. */
 router.get('/', function (req, res, next) {
     console.log(CartItemModel);
     CartItemModel
     .find({})
-    .populate('userid','cartid','itemid')
+    .populate('userid')
+    .populate('cartid')
+    .populate('itemid')
     .exec(function (err, data) {
         console.log(data);
         res.json({ page: 'GET allCartItems page', data });
