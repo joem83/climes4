@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
- =
+ 
   items:any;
   quantity:number=1;
   subtotal:number;
