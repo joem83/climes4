@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SerMes4Service } from '../../services/ser-mes4.service'
+import { SerMes4Service } from '../../services/ser-mes4.service';
+import { AuthService } from '../../auth.service';
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-all-items',
@@ -9,7 +11,10 @@ import { SerMes4Service } from '../../services/ser-mes4.service'
 export class AllItemsComponent implements OnInit {
     allitem: any = [];
     allitems: any = [];
-    constructor(private _apiService: SerMes4Service) { }
+    constructor(
+        private _apiService: SerMes4Service,
+        private _authService: AuthService,
+        private router: Router) { }
 
     ngOnInit() {
         this._apiService.getAllItems().subscribe((data) => {
@@ -21,4 +26,21 @@ export class AllItemsComponent implements OnInit {
 
     }
 
+    onAddProductToCart(product){
+        console.log(product);
+        
+        const item = {
+          name: product.name,
+          product_id: product._id,
+          img: product.imagepath,
+          price: product.price,
+          added: true,
+          quantity:1
+        }
+        this._authService.storeItemToOrder(item);
+        
+       
+      }
+
+      
 }

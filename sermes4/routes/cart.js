@@ -4,7 +4,7 @@ var CartsModel = require('../models/cart');
 
 /* GET allcarts page. */
 router.get('/', function (req, res, next) {
-    console.log(CartsModel);
+   // console.log(CartsModel);
     CartsModel
     .find({})
     .populate('userid')
@@ -20,7 +20,7 @@ router.get('/:id', function (req, res, next) {
     .findOne({ _id: req.params.id })
     .populate('userid')
     .exec(function (err, data) {
-        console.log(data);
+       // console.log(data);
         res.json({ page: 'GET item page', data });
     });
 });

@@ -84,6 +84,16 @@ let headers = new HttpHeaders();
       })
   }
   
+  storeItemToOrder(item: any) {
+
+    var tempItem = JSON.parse(localStorage.getItem("items"));
+    if (tempItem == null) tempItem = [];
+    localStorage.setItem("item", JSON.stringify(item));
+    tempItem.push(item);
+    localStorage.setItem("items", JSON.stringify(tempItem));
+
+  }
+  
   getItemsForUser(id) {
     let headers = new HttpHeaders();
 
