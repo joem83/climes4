@@ -19,12 +19,17 @@ router.get('/', function (req, res, next) {
 
 /* GET Item page. */
 router.get('/:id', function (req, res, next) {
+    let _id= req.params.id;
+    console.log("id_e"+_id);
+
     CartItemModel
-    .findOne({ _id: req.params.id })
-    .populate('userid','cartid','itemid')
+    .find({ $or: [{"userid":_id}] })
+    .populate('userid')
+    .populate('cartid')
+    .populate('itemid')
     .exec(function (err, data) {
         console.log(data);
-        res.json({ page: 'GET item page', data });
+        res.json({ page: 'GET cart item page', data });
     });
 });
 

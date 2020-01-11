@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  orders: any = [];
+ // orders: any = [];
   items:any;
   quantity:number=1;
   subtotal:number;
@@ -25,17 +25,12 @@ export class CartComponent implements OnInit {
   var id= this.user._id;
   //console.log(id);
   
-    this._authService.getOrderForUser(id).subscribe((data) => {
+    this._authService.getItemsForUser(id).subscribe((data) => {
+
       let datas = data;
-      this.orders = datas;
-     console.log(this.orders);
-      this.name= JSON.parse(localStorage.getItem("user"));
-     // console.log(this.name);
-      
-if(this.name) {
-        //console.log(name);
-        this.user= this.name.fn;
-        }
+      this.items = datas.data[0];
+     this.items = Array.of(this.items); 
+
     });
 
     //this.items =this._authService.getOrderForUser();

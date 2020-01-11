@@ -84,7 +84,7 @@ let headers = new HttpHeaders();
       })
   }
   
-  getOrderForUser(id: number) {
+  getItemsForUser(id) {
     let headers = new HttpHeaders();
 
     headers.append('Content-Type', 'application/json');
