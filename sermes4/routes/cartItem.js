@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var CartItemModel = require('../models/cartItems').default;
+var CartItemModel = require('../models/cartItems');
 
 /* GET allItems page. */
 router.get('/', function (req, res, next) {

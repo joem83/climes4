@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 //Define a schema
 var Schema = mongoose.Schema;
 
-var cartItemSchema = new Schema({
+var cartItemsSchema = new Schema({
     userid: { type: mongoose.Schema.Types.ObjectId, ref: 'users' },
     quantity: { type: Number, default: 1 },
     itemid: { type: mongoose.Schema.Types.ObjectId, ref: 'item'},
@@ -13,4 +13,4 @@ var cartItemSchema = new Schema({
 });
 
 //Export function to create "SomeModel" model class
-module.exports = mongoose.model('cartItem', cartItemSchema );
+module.exports = mongoose.model('cart_item', cartItemsSchema );
