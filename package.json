@@ -25,7 +25,7 @@
     "angular2-flash-messages": "^3.0.1",
     "express-flash-messages": "^0.1.1",
     "flash-messages": "0.0.4",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.7.12",
     "nodemon": "^2.0.1",
     "passport": "^0.4.0",
